@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.cell{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.cell:nth-child(1),.cell:nth-child(2),.cell:nth-child(3){
+    border-top: none;
+}
+
+.cell:nth-child(3n+1){
+    border-left: none;
+}
+
+.cell:nth-child(3n+3){
+    border-right: none;
+}
+
+.cell:nth-child(7),.cell:nth-child(8),.cell:nth-child(9){
+    border-bottom: none;
+}
+
+.cell:hover{
+    background-color: lightgray;
+}
+
+.result{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+    opacity: 80%;
+    color: white;
+    font-size: 3rem;
+    display: none;
+}
+
+.result button{
+    margin-top: 15px;
+    padding: 10px 39px;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.result button:hover{
+    background: black;
+    color: white;
+}
+
+
